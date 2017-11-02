@@ -64,10 +64,8 @@ public class HandBlackJackTest {
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -77,11 +75,9 @@ public class HandBlackJackTest {
 	@Test
 	public void test1() {
 		
-		// TODO: Test 2-3-4, score should be 9
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
-		// TODO:  REMOVE THE COMMENTS FROM THE NEXT THREE LINES
 		
 		cards.add(new Card(eSuit.CLUBS,eRank.TWO));
 		cards.add(new Card(eSuit.CLUBS,eRank.THREE));
@@ -89,25 +85,22 @@ public class HandBlackJackTest {
 		
 		HandScoreBlackJack score = HandHelper(cards);
 		
-		//	TODO: Check Score to make sure it's right.  Something close to this:
 		assertEquals(9,score.getNumericScores().get(0).intValue());		
 	}
 
 	@Test
 	public void test2() {
 		
-		// TODO: Test J-A, Scores should be 11 & 21
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
-		// TODO:  REMOVE THE COMMENTS FROM THE NEXT THREE LINES
 		
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
 		
 		HandScoreBlackJack score = HandHelper(cards);
 		
-		//	TODO: Check Score to make sure it's right.  Something close to this:
+		
 		assertEquals(score.getNumericScores().size(),2);
 		assertEquals(11,score.getNumericScores().get(0).intValue());		
 		assertEquals(21,score.getNumericScores().get(1).intValue());
@@ -116,11 +109,9 @@ public class HandBlackJackTest {
 	@Test
 	public void test3() {
 		
-		// TODO: Test J-A-A, Scores should be 12, 22, 32
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
-		// TODO:  REMOVE THE COMMENTS FROM THE NEXT THREE LINES
 		
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
@@ -128,7 +119,7 @@ public class HandBlackJackTest {
 		
 		HandScoreBlackJack score = HandHelper(cards);
 		
-		//	TODO: Check Score to make sure it's right.  Something close to this:
+		
 		assertEquals(score.getNumericScores().size(),3);
 		assertEquals(12,score.getNumericScores().get(0).intValue());		
 		assertEquals(22,score.getNumericScores().get(1).intValue());
@@ -138,11 +129,9 @@ public class HandBlackJackTest {
 	@Test
 	public void test4() {
 		
-		// TODO: Test J-A-A-A, Scores should be 13, 23, 33, 43
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
-		// TODO:  REMOVE THE COMMENTS FROM THE NEXT THREE LINES
 		
 		cards.add(new Card(eSuit.CLUBS,eRank.JACK));
 		cards.add(new Card(eSuit.CLUBS,eRank.ACE));
@@ -151,7 +140,7 @@ public class HandBlackJackTest {
 		
 		HandScoreBlackJack score = HandHelper(cards);
 		
-		//	TODO: Check Score to make sure it's right.  Something close to this:
+		
 		assertEquals(score.getNumericScores().size(),4);
 		assertEquals(13,score.getNumericScores().get(0).intValue());		
 		assertEquals(23,score.getNumericScores().get(1).intValue());

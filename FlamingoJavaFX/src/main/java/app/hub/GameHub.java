@@ -12,7 +12,6 @@ public class GameHub extends Hub {
 
 	@Override
 	protected void messageReceived(int playerID, Object message) {
-		// TODO Auto-generated method stub
 		super.messageReceived(playerID, message);
 	}
 	

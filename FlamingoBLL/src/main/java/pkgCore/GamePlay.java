@@ -1,13 +1,15 @@
 package pkgCore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.UUID;
 
 import pkgEnum.eGameType;
 
 public abstract class GamePlay {
 
 	private eGameType eGameType;
-	private ArrayList<Player> GamePlayers = new ArrayList<Player>();
+	private HashMap<UUID,Player> GamePlayers = new HashMap<UUID,Player>();
 	
 	public GamePlay(eGameType eGameType)
 	{
@@ -15,17 +17,25 @@ public abstract class GamePlay {
 		this.eGameType = eGameType;
 	}
 	
-	protected void AddPlayersToGame(ArrayList<Player> Players)
+	protected void AddPlayersToGame(HashMap<UUID,Player> Players)
 	{
-		//TODO: Implement this method
+		GamePlayers.putAll(Players);
 	}
 	protected void RemovePlayerFromGame(Player p)
 	{
-		//TODO: Implement this method		
+		GamePlayers.remove(p.getPlayerID());		
 	}
 	protected Player GetPlayerInGame(Player p)
 	{
-		//TODO: Implement this method	
-		return null;
+			
+		return GamePlayers.get(p.getPlayerID());
+	}
+
+	public HashMap<UUID, Player> getGamePlayers() {
+		return GamePlayers;
+	}
+
+	public void setGamePlayers(HashMap<UUID, Player> gamePlayers) {
+		GamePlayers = gamePlayers;
 	}
 }
